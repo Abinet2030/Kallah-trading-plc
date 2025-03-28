@@ -1,0 +1,271 @@
+/* Basic Styles for the About Page */
+.about-page {
+   padding-top: 1px;
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+h2,
+h3 {
+    color: #333;
+}
+
+h3 {
+    font-size: 1.75rem;
+    margin-top: 30px;
+}
+
+/* Introduction Section */
+
+.intro p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+    text-align: justify;
+    padding: 60px;
+}
+
+/* Mission & Vision */
+
+.mission
+ {
+    background-color: #fff;
+    padding: 100px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: justify;
+    font-size: 1.1rem;
+        color: #666;
+        line-height: 1.6;
+}
+
+.mission h3
+ {
+    margin-bottom: 10px;
+    justify-content: center;
+    text-align: center;
+
+}
+h2{
+    text-align: center;
+    padding-left: 150px;
+}
+
+
+/* Team Section */
+.team {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.team-members {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.team-member {
+    text-align: center;
+}
+
+.team-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.team-member h4 {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.team-member p {
+    color: #666;
+}
+
+/* Story Section */
+.story p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
+/* Core Values Section */
+.core-values ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.core-values li {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Call to Action Section */
+.cta {
+    text-align: center;
+   margin-top: 400px;
+   margin-bottom: 10px;
+}
+
+.cta h3 {
+    font-size: 2rem;
+}
+
+.cta-button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 60px;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+/* horo picture */
+.intro {
+    margin: 40px 20px;
+    text-align: center;
+    /* Center the h2 header */
+}
+
+.intro h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    /* Ensures elements can wrap on small screens */
+}
+
+.content-wrapper p {
+    flex: 1;
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    text-align: left;
+    margin-bottom: 20px;
+    /* Space between the paragraph and the image on small screens */
+}
+
+.hiro-image {
+    width: 300px;
+    /* Default image width */
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    .intro h2 {
+        font-size: 1.5rem;
+        /* Smaller font size for tablets */
+    }
+
+    .content-wrapper {
+        flex-direction: column;
+        /* Stack items vertically on smaller screens */
+        text-align: center;
+        /* Center the paragraph and image */
+    }
+
+    .content-wrapper p {
+        text-align: center;
+        /* Center text on smaller screens */
+        margin-bottom: 20px;
+        /* Ensure space between text and image */
+    }
+
+    .hiro-image {
+        width: 80%;
+        /* Make image responsive */
+        max-width: 400px;
+        /* Limit the maximum width */
+        margin: 0 auto;
+        /* Center the image */
+    }
+}
+
+@media (max-width: 480px) {
+    .intro h2 {
+        font-size: 1.2rem;
+        /* Even smaller font size for mobile phones */
+    }
+
+    .hiro-image {
+        width: 100%;
+        /* Ensure the image takes up the full width on small screens */
+        max-width: none;
+        /* Remove the max-width restriction */
+    }
+}
+/* core value */
+.core-values {
+    margin: 40px 20px;
+    text-align: center;
+}
+
+.core-values h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.core-value {
+    display: flex;
+    align-items: center;
+    
+    margin: 20px 0;
+    gap: 20px;
+    text-align: left;
+    display: flex;
+    float: left;
+   padding-left: 30px;
+    margin-bottom: 5px;
+}
+
+.core-value .icon {
+    font-size: 3rem;
+    color: #007bff;
+    /* You can change the icon color */
+}
+
+.core-value .value h4 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.core-value .value p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .core-value {
+        flex-direction: column;
+        /* Stack icon and value on smaller screens */
+        align-items: center;
+        text-align: center;
+    }
+
+    .core-value .icon {
+        margin-bottom: 10px;
+    }
+}

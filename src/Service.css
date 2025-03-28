@@ -1,0 +1,54 @@
+.service-sectionn {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.service-containerr {
+  display: flex;
+  flex-direction: column; /* Stack the boxes vertically */
+  align-items: center;
+}
+
+.service-boxx {
+  background-color: #f4f4f4;
+  padding: 20px;
+  margin: 20px 0; /* Spacing between each service box */
+  width: 80%; /* Adjust the width as necessary */
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.iconss {
+  margin-bottom: 15px; /* Space between the icon and the second image */
+  display: flex;
+  justify-content: center; /* Center the icon horizontally */
+}
+
+.ig-iconss {
+  width: 60px; /* Size of the icon */
+  height: 60px;
+  object-fit: contain; /* Ensure the icon doesn't get distorted */
+}
+
+.service-image {
+  margin-bottom: 20px; /* Space between the first image and the title */
+}
+
+.service-img {
+  width: 100%; /* Make the second image responsive */
+  max-width: 300px; /* Maximum width of the second image */
+  height: auto;
+  object-fit: contain; /* Ensures the image doesn't stretch */
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1rem;
+  color: #666;
+}
