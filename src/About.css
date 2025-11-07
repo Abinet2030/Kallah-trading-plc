@@ -74,6 +74,21 @@ h3 {
 .team-member h4 { margin: 12px 0 4px; color: #111; }
 .team-member p { margin: 0 0 4px; color: #666; }
 
+/* Mission & Vision section spacing and readability */
+.mission { padding: 24px 16px; }
+.mission { margin-left:  206px; }
+.mission h2 { text-align: center; margin-bottom: 12px; }
+.mission p {
+  max-width: 1000px;          
+  padding:  24px;  
+            
+  line-height: 1.85;            /* comfortable reading */
+  font-size: 1.06rem;
+  color: #444;
+  text-align: justify;
+  
+}
+
 @media (min-width: 992px) {
   .team-members { flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 32px; }
   .team-member { width: 280px; }
