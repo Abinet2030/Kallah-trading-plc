@@ -1,33 +1,23 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
-import Navbar from './Navbar'
 import Footer from './Footer';
 import './About.css'
 function About() {
   return (
     <div>
-      <Navbar/>
          <div className='about-page'>
-          
            <section className="intro">
- 
-  <div className="content-wrapper">
-     
-    <p>
-      <h2>About Kallah Trading PLC</h2>
-      Kallah Trading PLC was founded and established in December 2024, by a group of dedicated Ethiopian citizens. The company was incorporated in accordance with the commercial code of Ethiopia, and is based in Addis Ababa, in the LEMI KURA Sub-city, as a private limited company.
-      <br />
-      Kallah Trading PLC was created with a clear focus on building a strong presence in the Ethiopian market, and in East Africa as a whole. We are dedicated to offering a wide range of services while supporting the nation's growing economy.
-    </p>
-    <img src="./asset/hiro2.jpg" alt="Kallah Trading" className="hiro-image" />
-  </div>
-</section>
-
+             <div className="content-wrapper">
+               <p>
+                 Kallah Trading PLC was created with a clear focus on building a strong presence in the Ethiopian market, and in East Africa as a whole. We are dedicated to offering a wide range of services while supporting the nation's growing economy.
+               </p>
+               <img src="./asset/hiro2.jpg" alt="Kallah Trading" className="hiro-image" />
+             </div>
+           </section>
 
         <div className="mission">
           <h2>Our Mission and Vision</h2>
           <p>
-           At Kallah Trading PLC, we are driven by a clear mission and a bold vision to contribute to Ethiopia's growth and to become a leader in East Africa.
 
 Our mission is to establish Kallah Trading PLC as an internationally competitive and well-organized company. We aim to deliver excellence across key sectors such as manufacturing, service delivery, technology, and telecommunications. By focusing on innovation and efficiency, we seek to provide high-quality products and services that meet both local and global standards.
 

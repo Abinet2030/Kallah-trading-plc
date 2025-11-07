@@ -1,11 +1,9 @@
 import React from 'react'
-import Navbar from './Navbar'
 import Footer from'./Footer'
 import './Service.css'
 function Service() {
   return (
     <div>
-        <Navbar/>
 
          <div className="service-sectionn">
   <h2>We Offer Service</h2>

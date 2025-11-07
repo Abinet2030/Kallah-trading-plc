@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
  import Footer from './Footer';
 import './Contact.css'
-import Navbar from'./Navbar';
 // ContactPage Component
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -29,7 +28,6 @@ const Contact = () => {
 
   return (
     <div>
-      <Navbar/>
     <div className="contact-page">
       {/* Name Section */}
       <section className="name-section">

@@ -5,9 +5,17 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden; /* avoid horizontal scroll */
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+*, *::before, *::after { box-sizing: border-box; }
+
+img, video { max-width: 100%; height: auto; display: block; }
+
+
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }

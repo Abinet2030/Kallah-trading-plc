@@ -1,7 +1,11 @@
 
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleMenu = () => setIsOpen((o) => !o);
+  const closeMenu = () => setIsOpen(false);
             
   
     
@@ -14,21 +18,25 @@ function Navbar() {
               <span className='trading'>Trading PLC</span>
             
         </div>
-        <div className='right'>
-          <ul>
-              <li   >
-              <Link to="/"  >Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/service">Service</Link>
-            </li>
-            <li>
-              <Link to="/Contact">Contact</Link>
-            </li>
-            
+        <button className="menu-toggle" aria-label="Toggle navigation" onClick={toggleMenu}>
+          <span className="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
+        </button>
+        <div className={`right ${isOpen ? 'open' : ''}`}>
+          <ul onClick={closeMenu}>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/about">About</Link>
+              </li>
+              <li>
+                <Link to="/service">Service</Link>
+              </li>
+              <li>
+                <Link to="/contact">Contact</Link>
+              </li>
           </ul>
         </div>
       </div>
