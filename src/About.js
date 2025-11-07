@@ -93,12 +93,7 @@ Our vision is to become the most competitive and leading business in Ethiopia an
 
       <section className="cta">
         <h3>Ready to Work With Us?</h3>
-        <button className="cta-button">
-          <NavLink to="/contact" className="learn-link">
-                  Contact Us
-                  </NavLink>
-          
-          </button>
+        <NavLink to="/contact" className="cta-button learn-link">Contact Us</NavLink>
       </section>
       </div>
       <Footer/>

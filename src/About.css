@@ -1,6 +1,6 @@
 /* Basic Styles for the About Page */
 .about-page {
-   padding-top: 1px;
+   padding-top: 80px; /* keep content below fixed navbar */
     background-color: #f4f4f4;
     font-family: Arial, sans-serif;
     overflow-x: hidden; 
@@ -26,146 +26,124 @@ h3 {
     padding: 24px; 
 }
 
-/* Mission & Vision */
-
-.mission
- {
-    background-color: #fff;
-    padding: 32px; 
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    text-align: justify;
-    font-size: 1.1rem;
-        color: #666;
-        line-height: 1.6;
-}
-
-.mission h3
- {
-    margin-bottom: 10px;
-    justify-content: center;
-    text-align: center;
-
-}
-
-h2{
-    text-align: center;
-    padding-left: 0;
-}
-
-/* Team Section */
-.team {
-    margin-top: 40px;
+/* Intro layout: text left, image right */
+.intro .content-wrapper {
     display: flex;
-    flex-direction: column; 
-    align-items: center;    
-    text-align: center;     
-}
-
-.team h3 {
-    margin-bottom: 16px;
-    width: 100%;
-}
-
-.team-members {
-    display: flex;
-    flex-direction: column;
+    flex-direction: row; /* text first (left), image second (right) */
     align-items: center;
-    gap: 24px;
-    width: 100%;
+    justify-content: space-between;
+    gap: 32px;
+    padding: 0 24px;
+}
+
+/* Team Section - Carded members with hover */
+.team { text-align: center; padding: 24px; }
+
+.team-members { gap: 24px; }
+
+.team-member {
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  overflow: hidden; /* keep image hover inside card */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team-member:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
 }
 
 .team-member img {
-    max-width: 320px;
-    width: 80%;
-    height: auto;
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
 }
 
-/* Call to Action Section */
-.cta {
-    text-align: center;
-   margin-top: 400px;
-   margin-bottom: 10px;
+.team-member:hover img {
+  transform: scale(1.03);
 }
 
-.cta h3 {
-    font-size: 2rem;
+.team-member h4 { margin: 12px 0 4px; color: #111; }
+.team-member p { margin: 0 0 4px; color: #666; }
+
+@media (min-width: 992px) {
+  .team-members { flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 32px; }
+  .team-member { width: 280px; }
+  /* Keep consistent image height inside cards on desktop */
+  .team-member img { width: 100%; max-width: 100%; height: 260px; object-fit: cover; }
+
+  .core-values { display: flex; flex-wrap: wrap; justify-content: center; gap: 32px; }
+  .core-value { width: 320px; flex-direction: column; align-items: center; text-align: center; }
 }
 
-.content-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    
+
+@media (min-width: 768px) {
+  
+  .team-members { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px; 
+    justify-items: center;
+  }
+  .team-member { width: 100%; max-width: 280px; }
+  .team-member img { width: 100%; height: auto; }
 }
 
-.content-wrapper p {
-    flex: 1;
-    font-size: 1rem;
-    color: #666;
-    line-height: 1.6;
-    text-align: left;
-    margin-bottom: 20px;
+@media (max-width: 480px) {
+  .about-page { padding-top: 96px; }
 }
 
-.hiro-image {
-    width: 300px;
-    height: auto;
-    object-fit: cover;
-    border-radius: 8px;
+/* Responsive stacking for intro on small/medium screens */
+@media (max-width: 991px) {
+  .intro .content-wrapper {
+    flex-direction: column;
+  }
+
+  .intro p {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+
+  .hiro-image {
+    flex: 0 0 auto;
+    max-width: 100%;
+    width: 100%;
+  }
 }
 
-@media (max-width: 768px) {
-    .intro h2 {
-        font-size: 1.5rem; 
-    }
+/* CTA section and colorful button */
+.cta { text-align: center; padding: 32px 16px; }
 
-    .intro p { padding: 16px; }
-
-    .mission { padding: 16px; }
-
-    .content-wrapper {
-        flex-direction: column; 
-        text-align: center;     
-    }
-
-    .content-wrapper p {
-        text-align: center;
-        margin-bottom: 20px;
-    }
-
-    .hiro-image {
-        width: 80%;
-        max-width: 400px;
-        margin: 0 auto;
-    }
-
-    .cta { margin-top: 40px; }
+.cta-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #ff7a59, #ffb457);
+  color: #ffffff !important;
+  border: none;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none !important;
+  box-shadow: 0 6px 16px rgba(255, 122, 89, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
 }
 
-.core-value .value h4 {
-    font-size: 1.5rem;
-    margin-bottom: 5px;
-    color: #333;
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(255, 122, 89, 0.45);
+  filter: brightness(1.03);
 }
 
-.core-value .value p {
-    font-size: 1rem;
-    color: #666;
-    line-height: 1.6;
+.cta-button:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 16px rgba(255, 122, 89, 0.35);
 }
 
-@media (max-width: 768px) {
-    .core-value {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .core-value .icon {
-        margin-bottom: 10px;
-    }
-}
+.cta-button:focus { outline: none; box-shadow: 0 0 0 3px rgba(255,122,89,0.25); }

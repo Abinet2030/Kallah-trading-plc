@@ -13,7 +13,7 @@ function Navbar() {
     <div>
       <div className='navigation'>
         <div className='left'>
-          <img className='logo-img' src={'./asset/Kallah image.jpg'} alt="Kallah Trading" />
+          <img className='logo-img' src={'/asset/service.png'} alt="Kallah Trading icon" />
           <span className='kallah'>Kallah </span>
               <span className='trading'>Trading PLC</span>
             

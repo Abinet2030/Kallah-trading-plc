@@ -369,8 +369,8 @@
 
  /* Hover effect for each testimonial box */
  .testimonial-box:hover {
-     transform: translateY(-5px);
- }
+    transform: translateY(-5px);
+}
 
  /* Responsive styling for smaller screens */
  @media (max-width: 1024px) {
@@ -382,7 +382,47 @@
 
  @media (max-width: 768px) {
      .testimonial-container {
-         grid-template-columns: 1fr;
-         /* 1 column on mobile */
-     }
- }
+        grid-template-columns: 1fr;
+        /* 1 column on mobile */
+    }
+}
+
+/* Team Section - shared look with About page */
+.team { text-align: center; padding: 24px; }
+
+.team-members {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  justify-items: center;
+}
+
+.team-member {
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  overflow: hidden;
+  width: 100%;
+  max-width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team-member:hover { transform: translateY(-6px); box-shadow: 0 10px 24px rgba(0,0,0,0.12); }
+
+.team-member img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover img { transform: scale(1.03); }
+
+.team-member h4 { margin: 12px 0 4px; color: #111; }
+.team-member p { margin: 0 0 4px; color: #666; }

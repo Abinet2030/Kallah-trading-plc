@@ -172,6 +172,28 @@ function Home() {
           </div>
         </div>
       </div>
+      {/* Meet Our Team (also shown on Home) */}
+      <section className="team">
+        <h3>Meet Our Team</h3>
+        <div className="team-members">
+          <div className="team-member">
+            <img src="./asset/test1 (3).png" alt="Team Member 1" />
+            <h4>John Doe</h4>
+            <p>CEO & Founder</p>
+          </div>
+          <div className="team-member">
+            <img src="./asset/test1 (3).png" alt="Team Member 2" />
+            <h4>Jane Smith</h4>
+            <p>Chief Marketing Officer</p>
+          </div>
+          <div className="team-member">
+            <img src="./asset/test1 (3).png" alt="Team Member 3" />
+            <h4>Mark Johnson</h4>
+            <p>Lead Developer</p>
+          </div>
+        </div>
+      </section>
+
       <Footer/>
     </div>
   );
